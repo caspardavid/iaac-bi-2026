@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your numbers &middot; Core Day 02</title>
+<meta name="description" content="Your numbers: instructions and prompts for Core Day 02, Business Innovation 2026.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bar"><a class="home" href="index.html">IAAC &middot; Business Innovation 2026 &middot; Core Day 02</a><div class="right"><span class="prog">4 / 8</span><details class="toc"><summary>Contents</summary><ol><li><a href="index.html">Overview</a></li><li><a href="01-build-sprint.html">Build sprint</a></li><li><a href="02-build-prompts.html">Builder prompts</a></li><li><a href="03-peer-test-ship.html">Peer test &amp; ship</a></li><li class="cur"><a href="04-your-numbers.html" aria-current="page">Your numbers</a></li><li><a href="05-numbers-prompts.html">AI: check your numbers</a></li><li><a href="06-the-pitch.html">The pitch</a></li><li><a href="07-desk-crits.html">Desk crits</a></li><li><a href="08-validation-sprint.html">Validation sprint</a></li></ol></details></div></div>
+<main>
+<p class="eyebrow">Exercise &middot; 12:50&ndash;13:30 &middot; 40 min</p>
+<h1>Your market and your first unit economics</h1>
+<p class="lead">Three things, for your own project. This sheet goes in your evidence pack.</p>
+<div class="callout"><span class="pill g">source</span> &middot; <span class="pill">interview</span> &middot; <span class="pill r">guess</span><p style="margin-top:12px">Mark every number. Every guess is a question: each number marked &ldquo;guess&rdquo; becomes an interview question or a test in the sprint.</p></div>
+<h2>1 &middot; Bottom-up market</h2>
+<div class="formula">Customers you can reach &times; conversion &times; price &times; purchases per year</div>
+<div class="tw"><table><thead><tr><th>Step</th><th>Example</th><th>Where the number comes from</th></tr></thead><tbody>
+<tr><td>Studios in the target area</td><td>2,000</td><td>Professional association, public business registers</td></tr>
+<tr><td>Reachable in year 1</td><td>40% &rarr; 800</td><td>Your channels: associations, events, LinkedIn</td></tr>
+<tr><td>Convert</td><td>5% &rarr; 40 clients</td><td>Your landing page and interviews</td></tr>
+<tr><td>Price &times; frequency</td><td>&euro;150 / month &times; 12</td><td>What they pay today for the workaround</td></tr>
+<tr><td><strong>Year-1 revenue potential</strong></td><td><strong>&euro;72,000</strong></td><td>Now do it for the pessimistic and optimistic case</td></tr></tbody></table></div>
+<p class="note">Illustrative: a daylight-analysis service for small studios. The numbers are made up to show the method. Yours need sources.</p>
+<ul class="sq"><li>Start from what you know: your segment, your region, your interviews</li><li>Use realistic assumptions, and write down where each one comes from</li><li>Follow your sales process and channels: how many can you actually reach?</li><li>Account for resistance to change and transition time: B2B and public buyers decide slowly</li><li>Build scenarios: pessimistic, mid, optimistic</li></ul>
+<p>TAM is everyone who could have the problem; SAM the segment your product and channels can actually serve; SOM the share you can realistically win in the next 3&ndash;5 years. Investors care most about the smallest circle, and how you&rsquo;ll get it.</p>
+<h2>2 &middot; Unit economics</h2><div class="cards two">
+<div class="card"><h3>CAC</h3><p>= sales and marketing spend in a period &divide; new customers in that period. Include people&rsquo;s time, not just ads. Different channels have different CACs.</p></div>
+<div class="card"><h3>CLV</h3><p>= revenue per period &times; gross margin &times; lifetime. Lifetime &asymp; 1 &divide; churn; churn = 1 &minus; retention.</p></div>
+<div class="card"><h3>CLV &divide; CAC</h3><p class="markers"><span style="background:var(--accent2)"></span>above 3&times; healthy<br><span style="background:var(--accent4)"></span>1&ndash;3&times; you survive, barely<br><span style="background:var(--accent3)"></span>below 1&times; every new customer loses money</p></div>
+<div class="card"><h3>Payback</h3><p>= CAC &divide; monthly margin. Aim for under 12 months.</p></div></div>
+<p>&euro;150/month at 70% gross margin = &euro;105 margin per month; 3% leave each month &rarr; lifetime &asymp; 33 months &rarr; CLV &asymp; &euro;3,500. With CAC &euro;600: 5.8&times;, payback &asymp; 6 months.</p>
+<div class="callout"><strong>No subscription?</strong> Many built-environment businesses sell projects. CLV = margin per project &times; repeat projects. Productise what you can (fixed scope, fixed price). Recurring revenue beats one-off: maintenance, monitoring, licences, memberships. Long sales cycles raise CAC: count the months, not just the euros.</div>
+<h2>3 &middot; How much money you need</h2>
+<p>Plan 12&ndash;18 months, in three scenarios: pessimistic, mid, optimistic. Include salaries (yours too), material and production costs, revenues (starting later than you think), and other expenses: tools, legal, travel, certification.</p>
+<p><strong>Runway</strong> = cash in the bank &divide; monthly net burn.</p>
+<h2>Quick calculator</h2><div class="calc">
+<div class="panel"><h3>Market</h3>
+<label>Customers in target area <input type="number" id="m-cust" value="2000" min="0" step="any"></label>
+<label>Reachable in year 1 % <input type="number" id="m-reach" value="40" min="0" step="any"></label>
+<label>Conversion % <input type="number" id="m-conv" value="5" min="0" step="any"></label>
+<label>Price per purchase &euro; <input type="number" id="m-price" value="150" min="0" step="any"></label>
+<label>Purchases per year <input type="number" id="m-n" value="12" min="0" step="any"></label>
+<div class="res"><div>Reachable <b id="o-reach">&mdash;</b></div><div>Clients <b id="o-clients">&mdash;</b></div><div class="k">Year-1 revenue <b id="o-rev">&mdash;</b></div></div></div>
+<div class="panel"><h3>Unit economics</h3>
+<label>Price per month &euro; <input type="number" id="u-price" value="150" min="0" step="any"></label>
+<label>Gross margin % <input type="number" id="u-gm" value="70" min="0" step="any"></label>
+<label>Monthly churn % <input type="number" id="u-churn" value="3" min="0" step="any"></label>
+<label>CAC &euro; <input type="number" id="u-cac" value="600" min="0" step="any"></label>
+<div class="res"><div>Margin per month <b id="o-margin">&mdash;</b></div><div>Lifetime <b id="o-life">&mdash;</b></div><div class="k">CLV <b id="o-clv">&mdash;</b></div><div class="k">CLV &divide; CAC <b id="o-ratio">&mdash;</b></div><div>Payback <b id="o-pay">&mdash;</b></div></div></div></div>
+<p class="note">A calculator does the arithmetic. The jury will ask where each input comes from.</p>
+<h2>Where to find the numbers</h2><div class="cards">
+<div class="card"><h3>Public statistics</h3><p>INE, Idescat, Eurostat, city open-data portals.</p></div>
+<div class="card"><h3>Associations</h3><p>Professional colleges and trade bodies count their members.</p></div>
+<div class="card"><h3>Competitors</h3><p>Reported customers, prices, funding announcements.</p></div>
+<div class="card"><h3>Your interviews</h3><p>Price, frequency and budget. The only numbers nobody else has.</p></div></div>
+<p class="warn-t">AI can suggest sources and do the arithmetic. Open every source it gives you: it invents statistics with confidence.</p>
+</main>
+<nav class="pn" aria-label="Page navigation"><a class="prev" href="03-peer-test-ship.html">&larr; Previous: Peer test &amp; ship</a><a class="next" href="05-numbers-prompts.html">Next: AI: check your numbers &rarr;</a></nav>
+
+<footer>IAAC &middot; Master programmes &middot; Business Innovation 2026</footer>
+<script src="site.js"></script>
+</body>
+</html>
